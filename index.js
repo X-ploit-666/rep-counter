@@ -24,7 +24,8 @@ let counterParam = Number(
 );
 
 if (counterParam) {
-    total = +counterParam;
+    total = counterParam;
+    saveEl.style.display = "block";
     saveEl.textContent += ` ${counterParam} - `
     totalEl.innerText = total;
     
@@ -39,14 +40,21 @@ increment.addEventListener('click', (e) => {
 
 
 function save() {
+    saveEl.style.display = "block";
     saveEl.textContent += ` ${count} - `
     total += count
     totalEl.innerText = `Total: ${total}`;
     count = 0
     destination.textContent = count
+    
 
 }
 
-document.getElementById("save-btn").addEventListener("click", save);
 
+function clear() {
+    saveEl.textContent = "REP HISTORY:"
+}
+
+document.getElementById("save-btn").addEventListener("click", save);
+document.getElementById("clear-btn").addEventListener("click",clear);
 
