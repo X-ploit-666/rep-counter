@@ -157,3 +157,20 @@ body::before {
     }
 
 }
+
+
+footer {
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+footer span {
+    color: #00ff88;
+    text-shadow:
+        0 0 5px #00ff88,
+        0 0 15px #00ff88;
+}
