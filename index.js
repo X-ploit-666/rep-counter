@@ -26,6 +26,7 @@ let counterParam = Number(
 if (counterParam) {
     total = counterParam;
     saveEl.style.display = "block";
+    saveEl.textContent = ""
     saveEl.textContent += ` ${counterParam} - `
     totalEl.innerText = total;
     
@@ -38,22 +39,24 @@ increment.addEventListener('click', (e) => {
 });
 
 
+function clear() {
+    saveEl.textContent = ""
+}
+
 
 function save() {
-    saveEl.style.display = "block";
+    if (saveEl.textContent.trim() === 'No sets recorded yet'){
+        saveEl.textContent = ""
+    }
     saveEl.textContent += ` ${count} - `
     total += count
     totalEl.innerText = `Total: ${total}`;
     count = 0
     destination.textContent = count
-    
-
 }
 
 
-function clear() {
-    saveEl.textContent = "REP HISTORY:"
-}
+
 
 document.getElementById("save-btn").addEventListener("click", save);
 document.getElementById("clear-btn").addEventListener("click",clear);

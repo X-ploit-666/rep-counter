@@ -1,22 +1,60 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1>REP COUNTER</h1>
-        <h2 id="count-el">0</h2>
-        <button id="increment-btn">INCREMENT</button>
-        <button id="save-btn">SAVE</button>
-        <button id="clear-btn">CLEAR HISTORY</button>
-        <p id="save-el" style="display: none;">REP HISTORY:</p>
-        <h1 id="total-el"></h1>
-        <footer>
-            > Built by <span>X-ploit</span>
-        </footer>
-        <script src="index.js"></script>
-    </body>
+<body>
+<main class="dashboard">
+    <header>
+        <p class="tag">
+            WORKOUT TRACKER
+        </p>
+
+        <h1>
+            REP COUNTER
+        </h1>
+    </header>
+    <section class="counter-card">
+        <p class="label">
+            CURRENT SET
+        </p>
+        <h2 id="count-el">
+            0
+        </h2>
+    </section>
+    <div class="actions">
+        <button id="increment-btn">
+            + ADD REP
+        </button>
+        <button id="save-btn">
+            SAVE SET
+        </button>
+        <button id="clear-btn">
+            CLEAR
+        </button>
+    </div>
+    <section id="history">
+        <h3>
+            REP HISTORY
+        </h3>
+        <p id="save-el">
+            No sets recorded yet
+        </p>
+    </section>
+    <section class="total">
+        <span>
+            TOTAL REPS
+        </span>
+        <h2 id="total-el">
+            0
+        </h2>
+    </section>
+</main>
+<footer>
+    > Built By <span>X-ploit </span> <
+</footer>
+<script src="index.js"></script>
+</body>
 </html>
